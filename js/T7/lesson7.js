@@ -39,7 +39,7 @@ for(let i = 0; i < strings.length; i += 1){
 // 6
 
 console.log("6 завдання");
-const addNumbers = [12,52,4632,448,1,1.1,5.022];
+const addNumbers = [12,52,4632,448,1,1.1,5.022,20,122,10];
 let result = 0;
 for (let i = 0; i < addNumbers.length; i+= 1) {
     result += addNumbers[i];
