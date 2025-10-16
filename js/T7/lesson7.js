@@ -7,7 +7,7 @@ console.log(numbers);
 // 2
 console.log("2 Завдання");
 let texts = ["My", "name", "is"];
-texts[texts.length] = "Mykola";
+texts[3] = "Mykola";
 console.log(texts);
 
 // 3
@@ -37,6 +37,14 @@ for(let i = 0; i < strings.length; i += 1){
 }
 
 // 6
+
+console.log("6 завдання");
+const addNumbers = [12,52,4632,448,1,1.1,5.022];
+let result = 0;
+for (let i = 0; i < addNumbers.length; i+= 1) {
+    result += addNumbers[i];
+}
+console.log(result);
 
 // 7
 console.log("7 Завдання");
