@@ -62,29 +62,75 @@ console.log(checkForSpam("My inbox is full of spam about a huge sale."));
 console.log(checkForSpam("The sun set behind the quiet hills."));
 
 // 6
-let input;
-const numbers = [];
-let total = 0;
+// console.log("6 Task");
 
-do {
-    input = prompt("Введіть число");
-    if (input === null) {
-        break;
-    }
-    if (isNaN(input)) {
-        alert("Було введено не число, попробуйте ще раз")
-        continue;
-    }
-    const number = Number(input);
-    numbers.push(number);
+// let input;
+// const numbers = [];
+// let total = 0;
 
-} while (true);
+// do {
+//     input = prompt("Введіть число");
+//     if (input === null) {
+//         break;
+//     }
+//     if (isNaN(input)) {
+//         alert("Було введено не число, попробуйте ще раз")
+//         continue;
+//     }
+//     const number = Number(input);
+//     numbers.push(number);
 
-if (numbers.length > 0) {
-    for (let i = 0; i < numbers.length; i++) {
-        total += numbers[i];
+// } while (true);
+
+// if (numbers.length > 0) {
+//     for (let i = 0; i < numbers.length; i++) {
+//         total += numbers[i];
         
-    }
-    console.log(`Загальна сума чисел дорівнює ${total}`);
+//     }
+//     console.log(`Загальна сума чисел дорівнює ${total}`);
     
+// }
+
+// 7
+console.log("7 task");
+
+const logins = ["nexaro","lufren","zovrix","melqon","trevix","aerlin","folmar","kyrenz","ulvion","draxel_"];
+const enterLogin = prompt("Введіть ваш логін");
+// logins.push(enterLogin);
+
+function isLoginValid(login) {
+    if (login.length >= 4 && login.length <= 16) {
+       alert("Логін введено правильно");
+       return true;
+    }
+    else if(login.length < 4){
+        alert("Логін закороткий");
+        return false;
+    }
 }
+function isLoginUnique(allLogins, login) {
+    if (!allLogins.includes(login)) {
+        alert("Логін успішно доданий!");
+        allLogins.push(login);
+        return allLogins;
+    }
+    else if(allLogins.includes(login)) {
+        alert("Логін вже існує");
+        return false;
+    }
+}
+
+function addLogin(allLogins, login) {
+  if (!isLoginValid(login)) {
+    alert("Помилка! Логін повинен бути від 4 до 16 символів");
+  } else if (!isLoginUnique(allLogins, login)) {
+    alert("Такий логін уже використовується!");
+  } else {
+    allLogins.push(login);
+    alert("Логін успішно доданий!");
+  }
+  return allLogins;
+}
+
+console.log(addLogin(logins,enterLogin));
+
