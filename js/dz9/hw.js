@@ -61,35 +61,35 @@ function checkForSpam(message) {
 console.log(checkForSpam("My inbox is full of spam about a huge sale."));
 console.log(checkForSpam("The sun set behind the quiet hills."));
 
-// 6
-// console.log("6 Task");
+6
+console.log("6 Task");
 
-// let input;
-// const numbers = [];
-// let total = 0;
+let input;
+const numbers = [];
+let total = 0;
 
-// do {
-//     input = prompt("Введіть число");
-//     if (input === null) {
-//         break;
-//     }
-//     if (isNaN(input)) {
-//         alert("Було введено не число, попробуйте ще раз")
-//         continue;
-//     }
-//     const number = Number(input);
-//     numbers.push(number);
+do {
+    input = prompt("Введіть число");
+    if (input === null) {
+        break;
+    }
+    if (isNaN(input)) {
+        alert("Було введено не число, попробуйте ще раз")
+        continue;
+    }
+    const number = Number(input);
+    numbers.push(number);
 
-// } while (true);
+} while (true);
 
-// if (numbers.length > 0) {
-//     for (let i = 0; i < numbers.length; i++) {
-//         total += numbers[i];
+if (numbers.length > 0) {
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
         
-//     }
-//     console.log(`Загальна сума чисел дорівнює ${total}`);
+    }
+    console.log(`Загальна сума чисел дорівнює ${total}`);
     
-// }
+}
 
 // 7
 console.log("7 task");
