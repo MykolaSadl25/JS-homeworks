@@ -61,7 +61,7 @@ function checkForSpam(message) {
 console.log(checkForSpam("My inbox is full of spam about a huge sale."));
 console.log(checkForSpam("The sun set behind the quiet hills."));
 
-6
+// 6
 console.log("6 Task");
 
 let input;
