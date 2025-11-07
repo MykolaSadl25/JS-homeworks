@@ -96,7 +96,6 @@ console.log("7 task");
 
 const logins = ["nexaro","lufren","zovrix","melqon","trevix","aerlin","folmar","kyrenz","ulvion","draxel_"];
 const enterLogin = prompt("Введіть ваш логін");
-// logins.push(enterLogin);
 
 function isLoginValid(login) {
     if (login.length >= 4 && login.length <= 16) {
