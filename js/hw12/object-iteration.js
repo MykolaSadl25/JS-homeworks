@@ -81,9 +81,48 @@ console.log(countTotalSalary(workers));
 // 5
 console.log("5 Task");
 
+const products = [
+  { name: "Laptop", price: 1200, category: "electronics" },
+  { name: "Headphones", price: 80, category: "electronics" },
+  { name: "Chair", price: 150, category: "furniture" },
+  { name: "Mug", price: 12, category: "kitchen" }
+];
+
+function getAllPropValues(array,prop) {
+    const propValue = [];
+    for (const i of array) {
+        if (i[prop]) {
+            propValue.push(i[prop])
+        }
+    }
+    return propValue;
+}
+console.log(getAllPropValues(products,"name"));
+console.log(getAllPropValues(products,"price"));
+console.log(getAllPropValues(products,"category"));
+
 // 6 
 console.log("6 Task");
+const store = [
+  { name: "Laptop", price: 1200, quantity: 3 },
+  { name: "Headphones", price: 80, quantity: 10 },
+  { name: "Mouse", price: 25, quantity: 50 },
+  { name: "Keyboard", price: 45, quantity: 20 },
+  { name: "Chair", price: 150, quantity: 5 },
+  { name: "Mug", price: 12, quantity: 100 }
+];
 
-const arr = [
-    {milk: 80}
-]
+function calculateTotalPrice(allProducts, productName) {
+    for (const el of allProducts) {
+        if (el.name === productName) {
+            let fullPrice = el.price * el.quantity;
+            return fullPrice;
+        }
+    }
+}
+console.log(calculateTotalPrice(store,"Laptop"));
+console.log(calculateTotalPrice(store,"Headphones"));
+console.log(calculateTotalPrice(store,"Mouse"));
+console.log(calculateTotalPrice(store,"Keyboard"));
+console.log(calculateTotalPrice(store,"Chair"));
+console.log(calculateTotalPrice(store,"Mug"));
