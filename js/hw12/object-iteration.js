@@ -2,7 +2,7 @@
 console.log("1 Task");
 
 const user1 = {
-    hobby:"Hobby Horsing",
+    hobby:"Hobby football",
     premium:true,
 }
 user1.mood = "happy";
@@ -25,7 +25,6 @@ const user = {
 }
 function countProps(obj){
 let key = Object.keys(obj);
-console.log(key);
 return key.length;
 }
 
