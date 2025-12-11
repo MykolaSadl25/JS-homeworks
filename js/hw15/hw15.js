@@ -169,18 +169,35 @@ const users = [
   },
 
 ];
-const getUserNames = users => users.map((item)=> item.name);
-console.log(getUserNames(users));
+// 1 task
+console.log("1 Завдання");
+const calculateTotalBalance = users => users.reduce((acc,{balance})=> acc+=balance,0);
+console.log(calculateTotalBalance(users));
 
-const getUsersWithEyeColor = (users, color) => users.filter((item)=> item.eyeColor === color);
-console.log(getUsersWithEyeColor(users, 'blue'));
+// 2 task
+console.log("2 Завдання");
+const getUsersWithFriend = (users, friendName) => users.filter((item)=> item.friends.includes(friendName)).map((item)=> item.name);
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 
-const getUsersWithGender = (users, gender) => users.filter((item)=> item.gender === gender).map((item)=> item.name);
-console.log(getUsersWithGender(users, 'male'));
+// 3 task
+console.log("3 Завдання");
+const getNamesSortedByFriendsCount = users => [...users].sort((a,b)=> a.friends.length - b.friends.length).map((item)=> item.name);
+console.log(getNamesSortedByFriendsCount(users));
 
-const getInactiveUsers = users => users.filter((item)=> !item.isActive);
-console.log(getInactiveUsers(users));
+// 4 task
+console.log("4 Завдання");
+const getSortedUniqueSkills = users =>{
+  const uniqueSkills = [];
+  const allSkills = users.flatMap((item)=> item.skills);
+  allSkills.forEach(element => {
+    if (!uniqueSkills.includes(element)) {
+      uniqueSkills.push(element);
+    }
+  });
+  const sortedSkills = [...uniqueSkills].sort((a,b)=> a.localeCompare(b));
+  return sortedSkills;
+};
 
-const getUserWithEmail = (users, email) => users.find((item)=> item.email === email );
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); 
-console.log(getUserWithEmail(users, 'elmahead@omatom.com')); 
+console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
