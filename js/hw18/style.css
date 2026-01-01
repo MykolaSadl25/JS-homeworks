@@ -1,0 +1,23 @@
+#gallery{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+}
+.image{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20%;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.image:hover{
+    transform: scale(1.05);
+     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); /* сильніша тінь */
+}
